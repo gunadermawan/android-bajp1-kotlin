@@ -1,34 +1,25 @@
 package com.gunder.film.ui.home.content.tv
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import com.gunder.film.R
+import com.gunder.film.model.DataEntity
+import com.gunder.film.ui.detail.DetailActivity
+import com.gunder.film.ui.home.content.ContentAdapter
+import com.gunder.film.ui.home.content.ContentCallBack
+import com.gunder.film.ui.home.content.ContentViewModel
+import com.gunder.film.utils.Helpers.TYPE_TV
+import kotlinx.android.synthetic.main.fragment_movie.*
+import kotlinx.android.synthetic.main.fragment_tv.*
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [TvFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class TvFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+class TvFragment : Fragment(), ContentCallBack {
+    private lateinit var viewModel: ContentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,23 +29,37 @@ class TvFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_tv, container, false)
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment TvFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            TvFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        activity?.let {
+            viewModel = ViewModelProvider(it, ViewModelProvider.NewInstanceFactory())[ContentViewModel::class.java]
+        }
+        val listTv = viewModel.getListTv()
+        setRecyceler(listTv)
+    }
+
+    private fun setRecyceler(data: List<DataEntity>) {
+        rv_tv.apply {
+            layoutManager = GridLayoutManager(context, 2)
+            adapter = ContentAdapter(this@TvFragment)
+        }.also {
+            it.adapter.let { adapter ->
+                when(adapter){
+                    is ContentAdapter -> {
+                        adapter.setData(data)
+                    }
                 }
             }
+        }
+
     }
+
+    override fun onItemClicked(dataEntity: DataEntity) {
+        startActivity(
+            Intent(context, DetailActivity::class.java)
+                .putExtra(DetailActivity.EXTRA_DATA, dataEntity.id)
+                .putExtra(DetailActivity.EXTRA_TYPE, TYPE_TV)
+        )
+    }
+
 }

@@ -5,9 +5,9 @@ import androidx.annotation.Nullable
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
-import com.gunder.film.MovieFragment
 import com.gunder.film.R
-import com.gunder.film.TvFragment
+import com.gunder.film.ui.home.content.movie.MovieFragment
+import com.gunder.film.ui.home.content.tv.TvFragment
 
 class SectionPageAdapter(private val mContext: Context, fm: FragmentManager) : FragmentPagerAdapter(
     fm,
@@ -35,6 +35,4 @@ class SectionPageAdapter(private val mContext: Context, fm: FragmentManager) : F
     override fun getPageTitle(position: Int): CharSequence? {
         return mContext.getString(tabTitle[position])
     }
-
-
 }
