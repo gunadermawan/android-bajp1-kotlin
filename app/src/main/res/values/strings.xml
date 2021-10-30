@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">film</string>
+    <string name="image_preview">image preview</string>
 </resources>
