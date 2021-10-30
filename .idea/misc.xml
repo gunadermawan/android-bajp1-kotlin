@@ -4,7 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/mobile programming/Kampus-merdeka/android-jetpack/film/app/src/main/res/drawable/bg_item.xml" value="0.2212962962962963" />
+        <entry key="..\:/mobile programming/Kampus-merdeka/android-jetpack/film/app/src/main/res/layout/activity_detail.xml" value="0.2" />
         <entry key="..\:/mobile programming/Kampus-merdeka/android-jetpack/film/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/mobile programming/Kampus-merdeka/android-jetpack/film/app/src/main/res/layout/activity_splash.xml" value="0.20277777777777778" />
+        <entry key="..\:/mobile programming/Kampus-merdeka/android-jetpack/film/app/src/main/res/layout/fragment_movie.xml" value="0.20277777777777778" />
+        <entry key="..\:/mobile programming/Kampus-merdeka/android-jetpack/film/app/src/main/res/layout/list_item.xml" value="0.4" />
       </map>
     </option>
   </component>
