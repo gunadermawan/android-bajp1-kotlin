@@ -15,7 +15,6 @@ import com.gunder.film.ui.home.content.ContentAdapter
 import com.gunder.film.ui.home.content.ContentCallBack
 import com.gunder.film.ui.home.content.ContentViewModel
 import com.gunder.film.utils.Helpers.TYPE_MOVIE
-import com.gunder.film.utils.Helpers.TYPE_TV
 import kotlinx.android.synthetic.main.fragment_movie.*
 
 class MovieFragment : Fragment(), ContentCallBack {

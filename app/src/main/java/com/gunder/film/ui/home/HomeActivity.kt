@@ -14,10 +14,7 @@ class HomeActivity : AppCompatActivity() {
         carausel_view.pageCount = carauselImg.size
         carausel_view.setImageListener(imgListener)
         setSupportActionBar(toolBar)
-        supportActionBar?.apply {
-            title = ""
-            elevation = 0f
-        }
+        supportActionBar?.elevation = 0f
         val sectionPageAdapter = SectionPageAdapter(this, supportFragmentManager)
         view_pager.adapter = sectionPageAdapter
         tab_layout.setupWithViewPager(view_pager)
