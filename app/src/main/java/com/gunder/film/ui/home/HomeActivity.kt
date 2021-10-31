@@ -25,12 +25,15 @@ class HomeActivity : AppCompatActivity() {
 
     val carauselImg = intArrayOf(
         R.drawable.latar_a_star,
-        R.drawable.latar_alita,
-        R.drawable.latar_family_guy,
-        R.drawable.latar_hanna,
+        R.drawable.poster_flash,
+        R.drawable.poster_bohemian,
         R.drawable.latar_flash,
+        R.drawable.latar_hanna,
+        R.drawable.poster_infinity_war,
+        R.drawable.latar_alita,
         R.drawable.poster_alita,
-        R.drawable.poster_flash
+        R.drawable.latar_family_guy,
+        R.drawable.poster_cold_persuit
     )
     val imgListener = ImageListener { position, imageView ->
         imageView.setImageResource(carauselImg[position])

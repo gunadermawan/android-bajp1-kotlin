@@ -36,6 +36,8 @@
         android:layout_height="200dp"
         android:background="@android:color/white"
         app:indicatorVisibility="visible"
+        app:indicatorOrientation="vertical"
+        app:indicatorGravity="center_vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,7 +47,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="300dp"
         android:contentDescription="@string/image_preview"
         android:src="@drawable/bg_item"
         app:layout_constraintBottom_toBottomOf="@+id/carausel_view"
