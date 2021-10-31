@@ -22,7 +22,8 @@ class TvFragment : Fragment(), ContentCallBack {
     private lateinit var viewModel: ContentViewModel
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
@@ -32,7 +33,10 @@ class TvFragment : Fragment(), ContentCallBack {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         activity?.let {
-            viewModel = ViewModelProvider(it, ViewModelProvider.NewInstanceFactory())[ContentViewModel::class.java]
+            viewModel = ViewModelProvider(
+                it,
+                ViewModelProvider.NewInstanceFactory()
+            )[ContentViewModel::class.java]
         }
         val listTv = viewModel.getListTv()
         setRecyceler(listTv)
@@ -44,7 +48,7 @@ class TvFragment : Fragment(), ContentCallBack {
             adapter = ContentAdapter(this@TvFragment)
         }.also {
             it.adapter.let { adapter ->
-                when(adapter){
+                when (adapter) {
                     is ContentAdapter -> {
                         adapter.setData(data)
                     }
@@ -54,10 +58,10 @@ class TvFragment : Fragment(), ContentCallBack {
 
     }
 
-    override fun onItemClicked(dataEntity: DataEntity) {
+    override fun onItemClicked(data: DataEntity) {
         startActivity(
             Intent(context, DetailActivity::class.java)
-                .putExtra(DetailActivity.EXTRA_DATA, dataEntity.id)
+                .putExtra(DetailActivity.EXTRA_DATA, data.id)
                 .putExtra(DetailActivity.EXTRA_TYPE, TYPE_TV)
         )
     }

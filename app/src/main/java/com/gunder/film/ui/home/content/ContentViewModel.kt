@@ -6,5 +6,6 @@ import com.gunder.film.utils.DataDummy
 
 class ContentViewModel : ViewModel() {
     fun getListMovie(): List<DataEntity> = DataDummy.getDummyMovie()
+
     fun getListTv(): List<DataEntity> = DataDummy.getdummyTv()
 }

@@ -2,7 +2,6 @@ package com.gunder.film.ui.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import com.gunder.film.R
 import com.gunder.film.databinding.ActivityDetailBinding
@@ -20,21 +19,19 @@ class DetailActivity : AppCompatActivity() {
     }
 
     private lateinit var result: DataEntity
-    private lateinit var detailBinding: ActivityDetailBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        detailBinding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(detailBinding.root)
+        setContentView(R.layout.activity_detail)
 
         val viewModel = ViewModelProvider(
             this@DetailActivity,
             ViewModelProvider.NewInstanceFactory()
         )[DetailViewModel::class.java]
-        supportActionBar?.apply {
-            title = "detail movies"
-            setDisplayHomeAsUpEnabled(true)
-        }
+
+        supportActionBar?.title = "Detail Film"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
         val id = intent.getStringExtra(EXTRA_DATA)
         val type = intent.getStringExtra(EXTRA_TYPE)
 
@@ -49,7 +46,7 @@ class DetailActivity : AppCompatActivity() {
             }
             result = viewModel.getTvDetailById()
         }
-        tv_title.text = result.title
+        tv_title_detail.text = result.title
         tv_description_detail.text = result.description
         tv_release_date_detail.text = result.releaseYear
         tv_genre_detail.text = result.genre

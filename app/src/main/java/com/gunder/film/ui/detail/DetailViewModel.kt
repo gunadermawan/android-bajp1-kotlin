@@ -11,7 +11,8 @@ class DetailViewModel : ViewModel() {
     private fun getListMovie(): ArrayList<DataEntity> =
         DataDummy.getDummyMovie() as ArrayList<DataEntity>
 
-    private fun getListTv(): ArrayList<DataEntity> = DataDummy.getdummyTv() as ArrayList<DataEntity>
+    private fun getListTv(): ArrayList<DataEntity> =
+        DataDummy.getdummyTv() as ArrayList<DataEntity>
 
     fun setMovieId(movieId: String) {
         this.movieId = movieId

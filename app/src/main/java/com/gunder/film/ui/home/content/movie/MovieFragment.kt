@@ -14,6 +14,7 @@ import com.gunder.film.ui.detail.DetailActivity
 import com.gunder.film.ui.home.content.ContentAdapter
 import com.gunder.film.ui.home.content.ContentCallBack
 import com.gunder.film.ui.home.content.ContentViewModel
+import com.gunder.film.utils.Helpers.TYPE_MOVIE
 import com.gunder.film.utils.Helpers.TYPE_TV
 import kotlinx.android.synthetic.main.fragment_movie.*
 
@@ -56,11 +57,11 @@ class MovieFragment : Fragment(), ContentCallBack {
         }
     }
 
-    override fun onItemClicked(dataEntity: DataEntity) {
+    override fun onItemClicked(data: DataEntity) {
         startActivity(
             Intent(context, DetailActivity::class.java)
-                .putExtra(DetailActivity.EXTRA_DATA, dataEntity.id)
-                .putExtra(DetailActivity.EXTRA_TYPE, TYPE_TV)
+                .putExtra(DetailActivity.EXTRA_DATA, data.id)
+                .putExtra(DetailActivity.EXTRA_TYPE, TYPE_MOVIE)
         )
     }
 
