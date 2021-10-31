@@ -28,7 +28,9 @@ class HomeActivity : AppCompatActivity() {
         R.drawable.latar_alita,
         R.drawable.latar_family_guy,
         R.drawable.latar_hanna,
-        R.drawable.latar_flash
+        R.drawable.latar_flash,
+        R.drawable.poster_alita,
+        R.drawable.poster_flash
     )
     val imgListener = ImageListener { position, imageView ->
         imageView.setImageResource(carauselImg[position])

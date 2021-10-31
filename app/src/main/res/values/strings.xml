@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">film</string>
-    <string name="movie">Movie</string>
-    <string name="tv">Tv</string>
+    <string name="movie">FILM</string>
+    <string name="tv">TV</string>
     <string name="image_preview">image preview</string>
     <string name="release_dare">Release Dare</string>
     <string name="description">Description</string>

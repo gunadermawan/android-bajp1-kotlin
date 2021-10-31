@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.gunder.film.R
-import com.gunder.film.databinding.ActivityDetailBinding
 import com.gunder.film.model.DataEntity
 import com.gunder.film.utils.Helpers.TYPE_MOVIE
 import com.gunder.film.utils.Helpers.TYPE_TV
