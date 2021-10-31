@@ -35,9 +35,9 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:background="@android:color/white"
-        app:indicatorVisibility="visible"
-        app:indicatorOrientation="vertical"
         app:indicatorGravity="center_vertical"
+        app:indicatorOrientation="vertical"
+        app:indicatorVisibility="visible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:contentDescription="@string/image_preview"
         android:src="@drawable/bg_item"
         app:layout_constraintBottom_toBottomOf="@+id/carausel_view"
@@ -67,9 +67,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/carausel_view"
         app:layout_constraintVertical_bias="0.0"
+        app:tabIndicatorAnimationMode="elastic"
         app:tabIndicatorColor="@color/redSolid"
+        app:tabIndicatorFullWidth="false"
         app:tabSelectedTextColor="@color/redSolid"
-        app:tabTextColor="@android:color/white" />
+        app:tabTextColor="@color/blueLight" />
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/view_pager"
