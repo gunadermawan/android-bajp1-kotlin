@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import androidx.core.os.postDelayed
 import com.gunder.film.R
 import com.gunder.film.ui.home.HomeActivity
 
@@ -18,6 +17,6 @@ class SplashActivity : AppCompatActivity() {
             val intent = Intent(this, HomeActivity::class.java)
             startActivity(intent)
             finish()
-        }, 2000)
+        }, 1500)
     }
 }

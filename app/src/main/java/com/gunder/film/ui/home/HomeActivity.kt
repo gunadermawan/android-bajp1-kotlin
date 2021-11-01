@@ -15,7 +15,7 @@ class HomeActivity : AppCompatActivity() {
         carausel_view.setImageListener(imgListener)
         setSupportActionBar(toolBar)
         supportActionBar?.apply {
-            title =""
+            title = ""
             elevation = 0f
         }
         val sectionPageAdapter = SectionPageAdapter(this, supportFragmentManager)
@@ -24,15 +24,15 @@ class HomeActivity : AppCompatActivity() {
     }
 
     val carauselImg = intArrayOf(
-        R.drawable.latar_a_star,
+        R.drawable.poster_how_to_train,
         R.drawable.poster_flash,
         R.drawable.poster_bohemian,
-        R.drawable.latar_flash,
-        R.drawable.latar_hanna,
+        R.drawable.poster_a_star_is_born,
+        R.drawable.poster_ralph,
         R.drawable.poster_infinity_war,
-        R.drawable.latar_alita,
+        R.drawable.poster_gotham,
         R.drawable.poster_alita,
-        R.drawable.latar_family_guy,
+        R.drawable.poster_doom_patrol,
         R.drawable.poster_cold_persuit
     )
     val imgListener = ImageListener { position, imageView ->
