@@ -21,4 +21,5 @@ Instrumentation Test
 Syarat:
 
 Menerapkan instrumentation test untuk memastikan fitur-fitur yang ada berjalan dengan semestinya.
-Tuliskan skenario instrumentation test pada kolom Catatan atau berkas tersendiri (jangan lupa sampaikan juga di kolom Catatan agar reviewer dapat mengetahuinya) ketika Anda ingin mengumpulkan tugas ini.
+Tuliskan skenario instrumentation test pada kolom Catatan atau berkas tersendiri (jangan lupa sampaikan juga di kolom Catatan agar reviewer dapat mengetahuinya) ketika Anda ingin mengumpulkan tugas ini.  
+![bajp1](https://user-images.githubusercontent.com/53375007/142511678-3f80657d-68ac-4fa4-9157-fc41677bb9f7.png)
