@@ -1,5 +1,3 @@
-# android-filmMvvm-kotlin
-project untuk submission 1 dicoding jetpack pro
 # Kriteria Submission
 Berikut kriteria submission yang harus Anda penuhi:
 
